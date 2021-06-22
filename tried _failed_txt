@@ -1,0 +1,23 @@
+tried adding tabs in panel_bot
+
+# print("panel_bot grid size: ", panel_bot.grid_size())
+# crr_can = tk.Canvas(panel_bot)
+# crr_can.pack(expand = 1, fill = tk.BOTH)
+
+# crr_bot = ttk.Notebook(panel_bot, width = 1100)
+# crr_bot.pack(expand = 1, fill = tk.BOTH)
+# crr_bot.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+# crr_can.create_window((0, 0), anchor  = tk.SE)
+
+# crop_tab = ttk.Frame(crr_bot)
+# crr_bot.add(crop_tab, text = "Crop")
+
+# test_lab = tk.Label(crop_tab, text = "hallo crop").pack()
+
+# resize_tab = ttk.Frame(crr_bot)
+# crr_bot.add(resize_tab, text = "Resize")
+# test_lab1 = tk.Label(crop_tab, text = "hallo resize_tab").pack()
+
+# rotate_tab = ttk.Frame(crr_bot)
+# crr_bot.add(rotate_tab, text = "Rotate")
+# test_lab2 = tk.Label(crop_tab, text = "hallo rotate_tab").pack()

@@ -1,0 +1,5 @@
+###28.04.21
+if time permits add the if user wants to just use pass and not key
+
+####28.4.2021
+deepfake part is commented to test for other parts

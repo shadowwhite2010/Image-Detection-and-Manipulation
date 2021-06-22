@@ -1,0 +1,50 @@
+https://ai.googleblog.com/2019/05/efficientnet-improving-accuracy-and.html
+http://www.ijltet.org/wp-content/uploads/2015/02/60.pdf
+
+in t9.py method to use scrolbar, 
+use that method to create function for deepfake result showing 
+deepfake result would be shown in image showing canvas
+
+use opt_can showing the options of deepfake detection
+
+#####
+24.04.21
+del_crface and show_res to complete
+
+show_res for showing df result
+del_crface for to delete cr_face dir images
+
+
+#####
+24.04.21 6.59
+in t1 traying to demo progressvar
+read from tkinter book for progressbar
+using progressbar for plting the prediction percentege
+in main file still workinng on deepfake
+
+####
+25.04.21
+on line 10 in testt.py
+
+####
+26.04.21 1.47 am
+solve window blue screen problem
+
+####
+password for new mail = Veda@spit
+
+####
+lot of work
+currently improving the stego code
+then move the stego options in main script to somewhere else so that we can place treeview at that place
+then edit options: search, create , add as much as you can 
+
+####
+26.04.21
+working on encd and dode placement in tkinter
+
+##
+12.05.21
+sleeping
+in main file at line 970
+working on effects editing options
