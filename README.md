@@ -7,4 +7,4 @@ It contains :
 3.) deepfake detection
 
 # Demo
-[![Project demo](https://drive.google.com/uc?export=view&id=1OK2DXeV8PZmFXHmW6JI0gPxeVrRmJODE)](https://drive.google.com/file/d/1scraHVxydRJW6KF-VVHRr4orSoJjCeQR/view?usp=sharing)
+[![Project demo](https://drive.google.com/uc?export=view&id=1EzoTJe67-X01mBDo7_JQhPbURDEOSCoh)](https://drive.google.com/file/d/1scraHVxydRJW6KF-VVHRr4orSoJjCeQR/view?usp=sharing)
