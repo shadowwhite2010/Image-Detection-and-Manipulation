@@ -15,12 +15,12 @@ import tensorflow as tf
 my_devices = tf.config.experimental.list_physical_devices(device_type='CPU')
 tf.config.experimental.set_visible_devices(devices= my_devices, device_type='CPU')
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras import applications
-from efficientnet.tfkeras import EfficientNetB0 #EfficientNetB1, EfficientNetB2, EfficientNetB3, EfficientNetB4, EfficientNetB5, EfficientNetB6, EfficientNetB7
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+# from tensorflow.keras import applications
+# from efficientnet.tfkeras import EfficientNetB0 #EfficientNetB1, EfficientNetB2, EfficientNetB3, EfficientNetB4, EfficientNetB5, EfficientNetB6, EfficientNetB7
+# from tensorflow.keras.models import Sequential
+# from tensorflow.keras.layers import Dense, Dropout
+# from tensorflow.keras.optimizers import Adam
+# from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 from tensorflow.keras.models import load_model
 # base_path = '/content/DeepFake-Detect/train_sample_videos'
 
@@ -30,7 +30,7 @@ from tensorflow.keras.models import load_model
  
 ##$$testing
 detector =  [MTCNN()]
-best_model = [load_model('D:/books/google_hash/best_model_7.h5')]
+best_model = [load_model('trained_models/best_model_7.h5')]
 
 
 def get_filename_only(file_path):
@@ -48,7 +48,7 @@ def vid_img(file_path):
     filename = str(path_file.name)
     base_path = str(path_file.parent)
     # tmp_path = os.path.join(base_path, get_filename_only(filename))
-    tmp_path = "D:/books\google_hash\d_f/vid_img"
+    tmp_path = "d_f/vid_img"
     # print('Creating Directory: ' + tmp_path)
     # os.makedirs(tmp_path, exist_ok=True)
     print('Converting Video to Images...')
@@ -86,7 +86,7 @@ def vid_img(file_path):
     print("Done!")
 
 def model_load():
-    return [load_model('D:/books/google_hash/best_model_7.h5')]
+    return [load_model('trained_models/best_model_7.h5')]
 
 def predictor():
     input_size = 128
@@ -95,7 +95,7 @@ def predictor():
     )
 
     pred_generator = pred_datagen.flow_from_directory(
-        directory = 'D:/books/google_hash/d_f',
+        directory = 'd_f',
         classes=['cr_face'],
         target_size = (input_size, input_size),
         color_mode = "rgb",
@@ -176,7 +176,7 @@ def crop_face_img(image):
             print(x1, y1, x2, y2)
             crop_image = image[y1:y2, x1:x2]
             # new_filename = '{}-{:02d}.png'.format(os.path.join(faces_path, get_filename_only(frame)), count)
-            new_filename = "D:/books/google_hash/d_f/cr_face/img" + str(count) + ".png"
+            new_filename = "d_f/cr_face/img" + str(count) + ".png"
             count = count + 1
             # cv2.imwrite(new_filename, cv2.cvtColor(crop_image, cv2.COLOR_RGB2BGR))
             cv2.imwrite(new_filename, crop_image)
@@ -188,11 +188,11 @@ def crop_face_vid():
     # filename = str(path_file.name)
     # base_path = str(path_file.parent)
     # tmp_path = os.path.join(base_path, get_filename_only(filename))
-    tmp_path = "D:/books\google_hash\d_f/vid_img"
+    tmp_path = "d_f/vid_img"
     print('Processing Directory: ' + tmp_path)
     frame_images = [x for x in os.listdir(tmp_path) if os.path.isfile(os.path.join(tmp_path, x))]
     # faces_path = os.path.join(tmp_path, 'faces')
-    faces_path = "D:/books\google_hash\d_f\cr_face"
+    faces_path = "d_f\cr_face"
     # print('Creating Directory: ' + faces_path)
     # os.makedirs(faces_path, exist_ok=True)
     print('Cropping Faces from Images...')
@@ -255,7 +255,7 @@ def main():
     #     print(tr, "\n------\n")
     #     print(type(tr.Filename), type(tr[2]))
     #     print(tr[1])
-    filepath = "D:\movies/fake_vid/testvid.mp4"
+    # filepath = "D:\movies/fake_vid/testvid.mp4"
     # vid_img(filepath)
     crop_face_vid()
 

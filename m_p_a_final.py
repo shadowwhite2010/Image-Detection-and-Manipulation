@@ -1,8 +1,7 @@
 import cv2
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk 
 import json
-# from ttkthemes import ThemedTk
 from tkinter import scrolledtext
 from PIL import ImageTk, Image, ImageEnhance, ImageOps, ImageFilter 
 from tkinter import filedialog, colorchooser
@@ -1055,7 +1054,7 @@ def show_res(test_results):
 
     dfres = tk.Frame(dfres_can)
     
-    path = "D:/books\google_hash\d_f"
+    path = "d_f"
     i = 0
     clr = ["red", "#12E32E", "#E39B44"]
     for tr in test_results.itertuples():
@@ -1110,10 +1109,10 @@ def df_handle(flag):
         if (flag == 1):
             open_img()
         if (len(img_list)>0):
-            del_dir_file("D:/books\google_hash\d_f\cr_face")
+            del_dir_file("d_f\cr_face")
             # crop_face_img(cv2.cvtColor(np.array(img_list[len(img_list)-1]), cv2.COLOR_RGB2BGR)) 
             crop_face_img(cv2.cvtColor(np.asarray(img), cv2.COLOR_RGB2BGR)) 
-            if (len(os.listdir("D:/books\google_hash\d_f\cr_face"))>0):
+            if (len(os.listdir("d_f\cr_face"))>0):
                 show_res(predictor())
             else:
                 show_error(2, "Sorry!! No Face Detected")
@@ -1122,12 +1121,12 @@ def df_handle(flag):
             show_error(2, "please select image")
     else:
         filepath = filedialog.askopenfilename(title ='pen', filetypes = [('videos', '*.mp4')])
-        del_dir_file("D:/books\google_hash\d_f\cr_face")
-        del_dir_file("D:/books\google_hash\d_f/vid_img")
+        del_dir_file("d_f\cr_face")
+        del_dir_file("d_f/vid_img")
         
         vid_img(filepath)
         crop_face_vid()
-        if (len(os.listdir("D:/books\google_hash\d_f\cr_face"))>0):
+        if (len(os.listdir("d_f\cr_face"))>0):
             show_res(predictor())
         else:
             show_error(2, "Sorry!! No Face Detected")
